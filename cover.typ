@@ -125,9 +125,15 @@
       organization: "주식회사 라프텔(Laftel)",
       homepage: link("https://laftel.oopy.io")[laftel.oopy.io],
     )[
-      애니메이션 OTT 서비스 라프텔에서 React와 React Native를 활용한 웹/앱 개발을 맡았습니다. 수행한 주요 업무는 다음과 같습니다.
+      애니메이션 OTT 서비스 라프텔에서 React와 React Native를 활용한 웹/앱 개발을 맡았습니다.
       - Firebase를 활용한 A/B 테스트
       - react-email과 tailwindcss를 활용한 이메일 템플릿 생성 및 관리, CI 연동 작업
+      - Next.js ISR을 활용한 Notion Database 기반 회사 블로그 구현
+      - AVFoundation 및 exoplayer (media3)를 활용한 react-native용 다운로드 모듈 개선
+      - 신규 프로덕트 #link("https://minam.co")[#text(fill: palette.link)[#underline[minam.co]]] 런칭까지 프론트엔드 단독 개발 \
+        react-router 7, panda-css, i18next 등 기술 도입
+      - 내부 이벤트 관리를 위한 WYSIWYG 에디터를 Tiptap 기반으로 신규 개발
+      - Changeset 기반 모노레포 관리 시스템 및 pkg.pr.new 스타일 프리뷰 배포 플로우 구축
     ],
   ),
 )
