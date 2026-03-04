@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "git config core.hooksPath scripts/git-hooks",
     "download-icons": "./src/download-icons.ts",
+    "fetch-commits": "./src/fetch-commits.ts",
     "fetch-github-metadata": "./src/fetch-github-metadata.ts",
     "fetch-solved-metadata": "./src/fetch-solved-metadata.ts",
     "generate-cover": "./src/generate-cover.ts",
