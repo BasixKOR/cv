@@ -1,6 +1,7 @@
 #!/usr/bin/env bun
 import { $ } from "bun";
 import path from "node:path";
+import { readdir } from "node:fs/promises";
 
 $.cwd(path.resolve(import.meta.dir, "../../"));
 
@@ -227,6 +228,7 @@ interface FetchResult {
   name: string;
   newCount: number;
   totalCount: number;
+  latestDate: string;
 }
 
 const changedRepos: FetchResult[] = [];
@@ -325,6 +327,7 @@ const fetchResults = await parallel(
       name: nwo,
       newCount: dedupedNew.length,
       totalCount: mergedCommits.length,
+      latestDate: mergedCommits[0].date,
     };
   },
   CONCURRENCY
@@ -341,13 +344,41 @@ for (const r of fetchResults) {
 state.last_run = new Date().toISOString();
 await Bun.write(STATE_PATH, JSON.stringify(state, null, 2) + "\n");
 
-// Step 6: Print summary to stdout
+// Step 6: Print summary to stdout, sorted by most recent activity
+changedRepos.sort(
+  (a, b) => new Date(b.latestDate).getTime() - new Date(a.latestDate).getTime()
+);
+
 console.log(
   `Fetched ${totalNewCommits} new commits across ${changedRepos.length} repos`
 );
 if (changedRepos.length > 0) {
-  console.log("Changed repos:");
+  console.log("Changed repos (most recent first):");
   for (const r of changedRepos) {
     console.log(`  ${r.name}: +${r.newCount} commits (${r.totalCount} total)`);
+  }
+}
+
+// List all repos needing analysis, sorted by recent activity
+const allRepoFiles = await readdir(REPOS_DIR);
+const needsAnalysis: Array<{ name: string; latestDate: string; commits: number }> = [];
+for (const f of allRepoFiles) {
+  if (!f.endsWith(".json")) continue;
+  const repo: RepoJson = await Bun.file(`${REPOS_DIR}/${f}`).json();
+  if (!repo.analysis && repo.commits.length > 0) {
+    needsAnalysis.push({
+      name: repo.name,
+      latestDate: repo.commits[0].date,
+      commits: repo.commits.length,
+    });
+  }
+}
+if (needsAnalysis.length > 0) {
+  needsAnalysis.sort(
+    (a, b) => new Date(b.latestDate).getTime() - new Date(a.latestDate).getTime()
+  );
+  console.log(`\nRepos needing analysis (${needsAnalysis.length}, most recent first):`);
+  for (const r of needsAnalysis) {
+    console.log(`  ${r.name}: ${r.commits} commits (latest: ${r.latestDate.slice(0, 10)})`);
   }
 }
