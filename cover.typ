@@ -138,6 +138,10 @@
   ],
   (
     activityEntry(
+      from: datetime(year: 2025, month: 8, day: 23),
+      title: [FEConf 2025 발표#super[#link("https://youtu.be/PcyA_rZmOR4")[#text(fill: palette.link)[#underline[#icon("logos/youtube-icon", width: 10.5333125pt, height: 8pt) TanStack Query 너머를 향해! 쿼리를 라우트까지 전파시키기]]]]],
+    )[],
+    activityEntry(
       from: datetime(year: 2023, month: 11, day: 17),
       title: belonging([해커톤 멘토 $and$ 심사위원], [쿠씨톤]),
     )[
@@ -158,6 +162,42 @@
     == 프로젝트#super[Projects]
   ],
   (
+    activityEntry(
+      from: datetime(year: 2025, month: 12, day: 7),
+      title: pad(top: -1em / 4)[
+        #grid(
+          columns: (1fr, auto),
+          gh-repo("RanolP/kati.nanno.space"), [ #tech-chips.typescript ],
+        )
+      ],
+    )[ ],
+    activityEntry(
+      from: datetime(year: 2025, month: 12, day: 30),
+      title: pad(top: -1em / 4)[
+        #grid(
+          columns: (1fr, auto),
+          gh-repo("RanolP/blog.ranolp.dev"), [ #tech-chips.typescript ],
+        )
+      ],
+    )[ ],
+    activityEntry(
+      from: datetime(year: 2025, month: 10, day: 29),
+      title: pad(top: -1em / 4)[
+        #grid(
+          columns: (1fr, auto),
+          gh-repo("RanolP/Lumo"), [ #tech-chips.typescript ],
+        )
+      ],
+    )[ ],
+    activityEntry(
+      from: datetime(year: 2025, month: 8, day: 17),
+      title: pad(top: -1em / 4)[
+        #grid(
+          columns: (1fr, auto),
+          gh-repo("RanolP/coshot.ranolp.dev"), [ #tech-chips.solidjs #tech-chips.vite ],
+        )
+      ],
+    )[ ],
     activityEntry(
       from: datetime(year: 2023, month: 10, day: 29),
       title: pad(top: -1em / 4)[
@@ -184,8 +224,7 @@
           gh-repo("RanolP/measurrred"), [ #tech-chips.rust ],
         )
       ],
-    )[
-    ],
+    )[ ],
     activityEntry(
       from: datetime(year: 2021, month: 12, day: 10),
       title: pad(top: -1em / 4)[
@@ -205,15 +244,6 @@
       ],
     )[ ],
     activityEntry(
-      from: datetime(year: 2021, month: 1, day: 4),
-      title: pad(top: -1em / 4)[
-        #grid(
-          columns: (1fr, auto),
-          gh-repo("RanolP/rano-lang"), [ #tech-chips.rust #tech-chips.wasm ],
-        )
-      ],
-    )[ ],
-    activityEntry(
       from: datetime(year: 2020, month: 10, day: 9),
       title: pad(top: -1em / 4)[
         #grid(
@@ -228,25 +258,6 @@
         #grid(
           columns: (1fr, auto),
           gh-repo("solvedac/unofficial-documentation"), [ #tech-chips.openapi ],
-        )
-      ],
-    )[ ],
-    activityEntry(
-      from: datetime(year: 2020, month: 5, day: 13),
-      title: pad(top: -1em / 4)[
-        #grid(
-          columns: (1fr, auto),
-          link("https://github.com/hanzzok")[#icon("devicon/github", bottom: -1em / 6) hanzzok],
-          [ #tech-chips.rust #tech-chips.wasm #tech-chips.typescript #tech-chips.nextjs ],
-        )
-      ],
-    )[ ],
-    activityEntry(
-      from: datetime(year: 2020, month: 4, day: 8),
-      title: pad(top: -1em / 4)[
-        #grid(
-          columns: (1fr, auto),
-          gh-repo("RanolP/boj"), [ #tech-chips.typescript #tech-chips.playwright ],
         )
       ],
     )[ ],

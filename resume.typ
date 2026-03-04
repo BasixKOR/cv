@@ -172,6 +172,10 @@
   ],
   (
     activityEntry(
+      from: datetime(year: 2025, month: 8, day: 23),
+      title: [FEConf 2025 발표#super[#link("https://youtu.be/PcyA_rZmOR4")[#text(fill: color.rgb("#1c7ed6"))[#underline[#icon("logos/youtube-icon", width: 10.5333125pt, height: 8pt) TanStack Query 너머를 향해! 쿼리를 라우트까지 전파시키기]]]]],
+    )[],
+    activityEntry(
       from: datetime(year: 2023, month: 11, day: 17),
       title: belonging([해커톤 멘토 $and$ 심사위원], [쿠씨톤]),
     )[
