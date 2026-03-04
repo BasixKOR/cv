@@ -27,20 +27,23 @@ Read output. It lists commits that got file-change data.
 
 ### Phase 3: Analyze
 
-For each repo listed as changed in Phase 1:
+Process repos needing analysis (listed by fetch-commits, most recent first).
+Skip repos where no new commits arrived since `analysis.analyzed_up_to`.
+
+For each repo:
 
 1. Read `data/commit-archive/repos/{owner}__{name}.json`
-2. Look at commits and their file changes
-3. Write or update the `analysis` field:
-   - `tech_stack`: string[] — from actual file extensions and contents
-   - `category`: one of the categories below
-   - `domain`: specific domain description
-   - `difficulty`: 1-5 (1=Low, 2=Medium, 3=High, 4=Very High, 5=Extreme)
-   - `summary`: 1-3 sentences from actual changes
-   - `timeline`: array of `{ date, milestone }` key events
-4. Write updated JSON back
-
-Skip repos where `analysis` exists and no new commits arrived.
+2. Find new commits (after `analysis.analyzed_up_to` SHA). Also include a few commits **before** the cursor as overlap context — work in progress may span across analysis sessions (e.g., a feature started last month, finished this month).
+3. Group the visible commits by time period. Analyze each period as a batch — WIP commits together tell the story, not individually.
+4. Merge into existing `analysis`:
+   - `tech_stack`: union (add new, never remove)
+   - `category`: one of the categories below (rarely changes)
+   - `domain`: rarely changes
+   - `difficulty`: 1-5 (can only increase)
+   - `summary`: refine if new work is significant
+   - `timeline`: append new milestones
+   - `analyzed_up_to`: set to newest commit SHA
+5. Write updated JSON back
 
 ### Phase 4: Render
 
