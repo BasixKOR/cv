@@ -6,8 +6,9 @@
   } else {
     dur
   }
-  let year = calc.floor(duration-in-weeks / 4 / 12)
-  let month = calc.rem(calc.floor(duration-in-weeks / 4), 12)
+  let total-months = calc.floor(duration-in-weeks * 12 / 52)
+  let year = calc.floor(total-months / 12)
+  let month = calc.rem(total-months, 12)
   [
     #if year > 0 {
       str(year) + "년"
