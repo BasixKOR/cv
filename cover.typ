@@ -173,7 +173,7 @@
       title: pad(top: -1em / 4)[
         #grid(
           columns: (1fr, auto),
-          gh-repo("RanolP/kati.nanno.space"), [ #tech-chips.typescript ],
+          gh-repo("RanolP/kati.nanno.space"), [ #tech-chips.typescript #tech-chips.duckdb ],
         )
       ],
     )[ ],
@@ -182,7 +182,7 @@
       title: pad(top: -1em / 4)[
         #grid(
           columns: (1fr, auto),
-          gh-repo("RanolP/blog.ranolp.dev"), [ #tech-chips.typescript ],
+          gh-repo("RanolP/blog.ranolp.dev"), [ #tech-chips.typescript #tech-chips.reactrouter #tech-chips.tiptap ],
         )
       ],
     )[ ],
@@ -200,7 +200,7 @@
       title: pad(top: -1em / 4)[
         #grid(
           columns: (1fr, auto),
-          gh-repo("RanolP/coshot.ranolp.dev"), [ #tech-chips.solidjs #tech-chips.vite ],
+          gh-repo("RanolP/coshot.ranolp.dev"), [ #tech-chips.solidjs #tech-chips.codemirror ],
         )
       ],
     )[ ],
@@ -218,7 +218,7 @@
       title: pad(top: -1em / 4)[
         #grid(
           columns: (1fr, auto),
-          gh-repo("RanolP/crowdin-strife"), [ #tech-chips.rust #tech-chips.mysql ],
+          gh-repo("RanolP/crowdin-strife"), [ #tech-chips.rust #tech-chips.postgresql ],
         )
       ],
     )[ ],

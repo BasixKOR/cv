@@ -100,6 +100,10 @@
     label: "GitHub",
   ),
   github-actions: (icon: "devicon/githubactions", label: "GitHub Actions"),
+  duckdb: (icon: "devicon/duckdb", label: "DuckDB"),
+  reactrouter: (icon: "devicon/reactrouter", label: "React Router"),
+  postgresql: (icon: "devicon/postgresql", label: "PostgreSQL"),
+  codemirror: (icon: "simple-icons/codemirror", label: "CodeMirror"),
 )
 
 #let tech-chips = for (k, v) in tech-list {

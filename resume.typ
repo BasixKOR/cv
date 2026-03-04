@@ -197,13 +197,13 @@
     activityEntry(
       from: datetime(year: 2025, month: 12, day: 7),
       title: pad(top: -1em / 4)[
-        #gh-repo("RanolP/kati.nanno.space") #h(1fr) #tech-chips.typescript
+        #gh-repo("RanolP/kati.nanno.space") #h(1fr) #tech-chips.typescript #tech-chips.duckdb
       ],
     )[ 서브컬처 행사 정보를 크롤링하고, Gemini를 활용해 정제하는 프로젝트입니다. DuckDB-WASM과 Monaco 에디터로 브라우저에서 SQL로 분석할 수 있습니다. ],
     activityEntry(
       from: datetime(year: 2025, month: 12, day: 30),
       title: pad(top: -1em / 4)[
-        #gh-repo("RanolP/blog.ranolp.dev") #h(1fr) #tech-chips.typescript
+        #gh-repo("RanolP/blog.ranolp.dev") #h(1fr) #tech-chips.typescript #tech-chips.reactrouter #tech-chips.tiptap
       ],
     )[ React Router v7 기반 개인 블로그입니다. 개발 환경에서 Tiptap 기반 WYSIWYG 편집기로 글을 작성할 수 있고, 정적 사이트로 빌드됩니다. ],
     activityEntry(
@@ -215,9 +215,9 @@
     activityEntry(
       from: datetime(year: 2025, month: 8, day: 17),
       title: pad(top: -1em / 4)[
-        #gh-repo("RanolP/coshot.ranolp.dev") #h(1fr) #tech-chips.solidjs #tech-chips.vite
+        #gh-repo("RanolP/coshot.ranolp.dev") #h(1fr) #tech-chips.solidjs #tech-chips.codemirror
       ],
-    )[ Twoslash를 지원하는 코드 스크린샷 도궁입니다. Shiki 하이라이터를 CodeMirror 6 에디터에 연결하고, Twoslash로 타입 정보를 보존하며 스크린샷을 찍어 공유할 수 있습니다. ],
+    )[ Twoslash를 지원하는 코드 스크린샷 도구입니다. Shiki 하이라이터를 CodeMirror 6 에디터에 연결하고, Twoslash로 타입 정보를 보존하며 스크린샷을 찍어 공유할 수 있습니다. ],
     activityEntry(
       from: datetime(year: 2023, month: 10, day: 29),
       title: pad(top: -1em / 4)[
@@ -228,7 +228,7 @@
     activityEntry(
       from: datetime(year: 2022, month: 8, day: 21),
       title: pad(top: -1em / 4)[
-        #gh-repo("RanolP/crowdin-strife") #h(1fr) #tech-chips.rust #tech-chips.mysql
+        #gh-repo("RanolP/crowdin-strife") #h(1fr) #tech-chips.rust #tech-chips.postgresql
       ],
     )[ Minecraft 번역 커뮤니티 사용자들이 기존 번역 및 외전 게임 텍스트를 쉽게 찾아볼 수 있도록 봇을 제작했습니다. ],
     activityEntry(
