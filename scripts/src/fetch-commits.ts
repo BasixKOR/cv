@@ -173,8 +173,10 @@ const knownOwners = new Set([
 ]);
 try {
   // gh search prs returns structured data
+  // Only search PRs since last run (or since epoch on first run)
+  const prSince = state.last_run?.slice(0, 10) ?? state.since.slice(0, 10);
   const result =
-    await $`gh search prs --author=${githubUser} --created=">=${state.since.slice(0, 10)}" --limit 200 --json repository`.nothrow().quiet();
+    await $`gh search prs --author=${githubUser} --updated=">=${prSince}" --limit 200 --json repository`.nothrow().quiet();
   if (result.exitCode === 0) {
     const prs: Array<{ repository: { nameWithOwner: string } }> =
       result.json();
