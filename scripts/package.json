@@ -6,10 +6,12 @@
     "prepare": "git config core.hooksPath scripts/git-hooks",
     "download-icons": "./src/download-icons.ts",
     "fetch-commits": "./src/fetch-commits.ts",
+    "fetch-file-changes": "./src/fetch-file-changes.ts",
     "fetch-github-metadata": "./src/fetch-github-metadata.ts",
     "fetch-solved-metadata": "./src/fetch-solved-metadata.ts",
     "generate-cover": "./src/generate-cover.ts",
     "prebuild": "./src/prebuild.ts",
+    "render-archive": "./src/render-archive.ts",
     "reset": "./src/reset.ts"
   },
   "devDependencies": {
